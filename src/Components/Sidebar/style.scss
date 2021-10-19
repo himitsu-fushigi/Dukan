@@ -1,0 +1,74 @@
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid rgb(219, 219, 219);
+  padding: 3vh;
+  overflow-y: scroll;
+
+  // section => sidebar title
+  .sidebar__title {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  // sidebar => sidebar searchbar
+  .sidebar__searchBar {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    i {
+      margin-right: 8px;
+    }
+
+    input {
+      border: none;
+      background: transparent;
+      flex: 1 1;
+    }
+  }
+
+  // sidebar => marketplace listing
+  .sidebar__marketplaceListing {
+    margin: 2vh 0;
+
+    .item {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      padding: 10px 1vw;
+      cursor: pointer;
+      width: 100%;
+      font-size: 15px;
+      justify-content: left;
+      text-transform: none;
+
+      i {
+        margin-right: 10px;
+        background: #f0f0f0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding-top: 2px;
+      }
+
+      &.active {
+        background: #f6f6f6;
+
+        i {
+          background: #78e08f;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #d6d6d6;
+  }
+}
