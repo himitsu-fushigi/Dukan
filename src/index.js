@@ -5,9 +5,14 @@ import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
 import 'remixicon/fonts/remixicon.css'
 
+// @cont3xt api
+import ActiveSidebarDataLayer from "./Context/Sidebar/ActiveSidebarItem";
+
 ReactDOM.render(
   <React.StrictMode>
+    <ActiveSidebarDataLayer>
     <App />
+    </ActiveSidebarDataLayer>
   </React.StrictMode>,
   document.getElementById('root')
 );
