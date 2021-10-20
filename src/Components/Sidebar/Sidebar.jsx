@@ -38,12 +38,9 @@ export default function Sidebar() {
       <div className="sidebar__marketplaceListing">
         {MarketPlaces.map((item) => (
           <Button
-            // @dev Use dispatch After Context is Set
             onClick={() => handleSidebarActiveDispatch(item.activeName)}
             key={item.name}
-            // @dev Use className After Context is Set
             className={`item ${active === item.activeName && "active"}`}
-            // className="item"
           >
             <i className={item.icon}></i> <span>{item.name}</span>
           </Button>
@@ -57,11 +54,9 @@ export default function Sidebar() {
         <h3 className="title">Categories</h3>
         {Categories.map((category) => (
           <Button
-            // @dev use dispact after context api is set
             onClick={() => handleSidebarActiveDispatch(category.activeName)}
             key={category.name}
             className={`item ${active === category.activeName && "active"}`}
-            // className="item"
           >
             <i className={category.icon}></i> <span>{category.name}</span>
           </Button>
