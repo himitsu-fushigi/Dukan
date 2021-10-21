@@ -5,7 +5,6 @@ import "./style.scss";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { Button } from "@material-ui/core";
 import ProductFilters from "../../Components/ProductFilters/ProductFilters";
-import ProductCard from "../../Components/ProductCard/ProductCard";
 
 // @utils
 import TopPickItems from "../../Utils/Home/TopPickProducts.json";
@@ -16,6 +15,7 @@ import Electronics from "../../Utils/Home/Electronics.json";
 import BeautyAndHealth from "../../Utils/Home/BeautyAndHealth.json";
 import Computers from "../../Utils/Home/Computers.json";
 import Family from "../../Utils/Home/Family.json";
+import ProductCard from "../../Components/ProductCard/ProductCard";
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
           {/* section => top picks => items */}
           <div className="home__browseAll__topPicks__items">
             {TopPickItems.map((item) => (
-              <ProductCard key={item.productName} item={item} />
+                  <ProductCard item={item} key={item.productName}/>
             ))}
           </div>
         </div>

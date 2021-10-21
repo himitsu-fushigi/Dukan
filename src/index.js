@@ -9,11 +9,9 @@ import 'remixicon/fonts/remixicon.css'
 import ActiveSidebarDataLayer from "./Context/Sidebar/ActiveSidebarItem";
 
 ReactDOM.render(
-  <React.StrictMode>
     <ActiveSidebarDataLayer>
     <App />
-    </ActiveSidebarDataLayer>
-  </React.StrictMode>,
+    </ActiveSidebarDataLayer>,
   document.getElementById('root')
 );
 
