@@ -16,10 +16,12 @@ import BeautyAndHealth from "../../Utils/Home/BeautyAndHealth.json";
 import Computers from "../../Utils/Home/Computers.json";
 import Family from "../../Utils/Home/Family.json";
 import ProductCard from "../../Components/ProductCard/ProductCard";
+import CheckoutButton from "../../Components/CheckoutButton/CheckoutButton";
 
 export default function Home() {
   return (
     <div className="home">
+      <CheckoutButton/>
       {/* section => sidebar */}
       <Sidebar />
 
