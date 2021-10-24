@@ -1,0 +1,61 @@
+.browseAll{
+    hr {
+        border: none;
+        border-top: 1px solid grey;
+        margin: 20px 0 30px 0;
+      }
+      // section => title
+      .browseAll__topPicks__title,
+      .browseAll__ToysAndGames__title,
+      .browseAll__vehicles__title,
+      .browseAll__clothing__title,
+      .browseAll__electronics__title,
+      .browseAll__beautyAndHealth__title,
+      .browseAll__computerAndPeripherals__title,
+      .browseAll__family__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+  
+        .browseAll__topPicks__title__filters {
+          display: flex;
+  
+          .MuiButton-root {
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+  
+            i {
+              margin-left: 8px;
+            }
+  
+            select {
+              border: none;
+              background: transparent;
+              margin-left: 6px;
+              font-size: 15px;
+  
+              &:focus {
+                border: none;
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+  
+      // section => items
+      .browseAll__topPicks__items,
+      .browseAll__ToysAndGames__items,
+      .browseAll__vehicles__items,
+      .browseAll__clothing__items,
+      .browseAll__electronics__items,
+      .browseAll__beautyAndHealth__items,
+      .browseAll__computerAndPeripherals__items,
+      .browseAll__family__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+}
