@@ -43,7 +43,12 @@ export default function ProductFocused() {
           </Breadcrumbs>
         </div>
 
-        {/* @section product card */}
+        {/* @section product display */}
+        <div className="productFocused__main__productDisplay">
+            this is display
+        </div>
+
+        
       </div>
     </div>
   );
