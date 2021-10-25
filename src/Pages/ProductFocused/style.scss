@@ -1,3 +1,62 @@
-.productFocused{
-    position: relative;
+.productFocused {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+  flex-direction: row;
+  position: relative;
+
+  .productFocused__main {
+    flex: 4;
+    padding: 2vh 3vh;
+    display: flex;
+    flex-direction: column;
+
+    .productFocused__main__searchBar {
+      background: rgb(245, 245, 245);
+      width: 30vw;
+      display: flex;
+      padding: 5px 20px;
+      border-radius: 15px;
+      align-self: flex-end;
+
+      input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        width: 30vw;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .MuiButton-root{
+          min-width: 0;
+      }
+    }
+
+    .productFocused__main__productDetails{
+        margin-top: 15px;
+        font-size: 14px;
+
+        .productFocused__main__productDetails__title{
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+
+            &:focus{
+                text-decoration: underline;
+            }
+        }
+
+        .MuiTypography-root{
+            font-size: 15px;
+        }
+    }
+  }
 }
