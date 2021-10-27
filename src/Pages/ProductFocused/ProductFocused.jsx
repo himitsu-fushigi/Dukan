@@ -13,6 +13,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import MarkdownPreview from "@uiw/react-markdown-preview";
+import Collapse from "@mui/material/Collapse";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -49,9 +50,14 @@ function a11yProps(index) {
 
 export default function ProductFocused() {
   const [value, setValue] = React.useState(0);
+  const [checked, setChecked] = React.useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleCollapse = () => {
+    setChecked((prev) => !prev);
   };
 
   const DescriptionMD = `
@@ -180,7 +186,23 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
               value={value}
               index={1}
             >
-              Reviews
+              <div className="productFocused__main__descriptionAndReviews__content__rating__detail">
+                <div className="productFocused__main__descriptionAndReviews__content__rating__detail__average__rating">
+                  <h3>Average Rating</h3>
+                  <h1>
+                    2.5/5
+                  </h1>
+
+                </div>
+                <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating">
+                  1
+                </div>
+
+                <div className="productFocused__main__descriptionAndReviews__content__rating__detail__write__review">
+                  1
+                </div>
+              </div>
+              <Collapse in={checked}>Write Review</Collapse>
             </TabPanel>
           </Box>
         </div>

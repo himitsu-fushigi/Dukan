@@ -141,6 +141,12 @@
       .MuiTypography-root{
         font-size: 14px;
       }
+
+      .productFocused__main__descriptionAndReviews__content__rating__detail{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+      }
     }
   }
 }
