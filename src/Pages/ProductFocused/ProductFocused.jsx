@@ -12,6 +12,7 @@ import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import MarkdownPreview from "@uiw/react-markdown-preview";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,6 +53,18 @@ export default function ProductFocused() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const DescriptionMD = `
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur placeat porro harum unde et error beatae molestiae sit, assumenda eveniet repudiandae, libero vero ipsum. Mollitia similique tenetur autem quaerat. 
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis iusto cum similique explicabo ab saepe qui voluptates accusamus, hic, laborum blanditiis? Quibusdam delectus repellendus non labore illum nulla dolorum.
+
+#### Specifications
+- Lorem Ipsum Dolor sit amet
+- Lorem Ipsum Dolor sit amet
+- Lorem Ipsum Dolor sit amet
+- Lorem Ipsum Dolor sit amet
+  `;
   return (
     <div className="productFocused">
       <CheckoutButton />
@@ -134,20 +147,39 @@ export default function ProductFocused() {
         {/* @section description and reviews */}
         <div className="productFocused__main__descriptionAndReviews">
           <Box sx={{ width: "100%" }}>
-            <Box className="productFocused__main__descriptionAndReviews__titleBar" sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Box
+              className="productFocused__main__descriptionAndReviews__titleBar"
+              sx={{ borderBottom: 1, borderColor: "divider" }}
+            >
               <Tabs
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
-                <Tab style={{textTransform: "initial"}} label="Description" {...a11yProps(0)} />
-                <Tab style={{textTransform: "initial"}} label="Reviews" {...a11yProps(1)} />
+                <Tab
+                  style={{ textTransform: "initial" }}
+                  label="Description"
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  style={{ textTransform: "initial" }}
+                  label="Reviews(8)"
+                  {...a11yProps(1)}
+                />
               </Tabs>
             </Box>
-            <TabPanel className="productFocused__main__descriptionAndReviews__content" value={value} index={0}>
-              Description
+            <TabPanel
+              className="productFocused__main__descriptionAndReviews__content"
+              value={value}
+              index={0}
+            >
+              <MarkdownPreview source={DescriptionMD} />
             </TabPanel>
-            <TabPanel className="productFocused__main__descriptionAndReviews__content" value={value} index={1}>
+            <TabPanel
+              className="productFocused__main__descriptionAndReviews__content"
+              value={value}
+              index={1}
+            >
               Reviews
             </TabPanel>
           </Box>
