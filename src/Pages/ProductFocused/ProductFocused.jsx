@@ -14,6 +14,8 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import Collapse from "@mui/material/Collapse";
+import Rating from "@mui/material/Rating";
+import LinearProgress from "@mui/material/LinearProgress";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -189,20 +191,90 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
               <div className="productFocused__main__descriptionAndReviews__content__rating__detail">
                 <div className="productFocused__main__descriptionAndReviews__content__rating__detail__average__rating">
                   <h3>Average Rating</h3>
-                  <h1>
-                    2.5/5
-                  </h1>
-
+                  <h1>2.5/5</h1>
+                  <Rating name="read-only" value={value} readOnly />
+                  <div className="productFocused__main__descriptionAndReviews__content__rating__detail__total__reviews">
+                    (22 Reviews)
+                  </div>
                 </div>
                 <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating">
-                  1
+                  <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__five__star">
+                    <div className="title">5 Star</div>
+                    <div>
+                      <LinearProgress variant="determinate" value="25" />
+                    </div>
+                    <div>6.36k</div>
+                  </div>
+                  <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__four__star">
+                    <div className="title">4 Star</div>
+                    <div>
+                      <LinearProgress variant="determinate" value="25" />
+                    </div>
+                    <div>6.36k</div>
+                  </div>
+                  <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__three__star">
+                    <div className="title">3 Star</div>
+                    <div>
+                      <LinearProgress variant="determinate" value="25" />
+                    </div>
+                    <div>6.36k</div>
+                  </div>
+                  <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__two__star">
+                    <div className="title">2 Star</div>
+                    <div>
+                      <LinearProgress variant="determinate" value="25" />
+                    </div>
+                    <div>6.36k</div>
+                  </div>
+                  <div className="productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__one__star">
+                    <div className="title">1 Star</div>
+                    <div>
+                      <LinearProgress variant="determinate" value="25" />
+                    </div>
+                    <div>6.36k</div>
+                  </div>
                 </div>
 
                 <div className="productFocused__main__descriptionAndReviews__content__rating__detail__write__review">
-                  1
+                  <Button onClick={handleCollapse}>
+                    <i className="ri-edit-2-line"></i>
+                    <span>Write Your Review</span>
+                  </Button>
                 </div>
               </div>
-              <Collapse in={checked}>Write Review</Collapse>
+              <Collapse
+                className="productFocused__main__descriptionAndReviews__content__collapsed__form"
+                in={checked}
+              >
+                <div className="productFocused__main__descriptionAndReviews__content__collapsed__form__content">
+                  <h3>Add Review</h3>
+                  <div className="productFocused__main__descriptionAndReviews__content__collapsed__form__rating">
+                    <p>Your rating on this product</p>
+                    <Rating
+                      name="simple-controlled"
+                      value={value}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                    />
+                    <form action="">
+                      <textarea
+                        name=""
+                        placeholder="Your Review*"
+                        id=""
+                        cols="30"
+                        rows="10"
+                      ></textarea>
+                      <input type="text" placeholder="Your Name*" />
+                      <input type="email" placeholder="Your Email*" />
+                    </form>
+                  </div>
+                  <div className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons">
+                    <Button>Cancel</Button>
+                    <Button>Post Review</Button>
+                  </div>
+                </div>
+              </Collapse>
             </TabPanel>
           </Box>
         </div>

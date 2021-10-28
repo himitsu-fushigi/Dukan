@@ -126,26 +126,100 @@
       border-radius: 15px;
 
       .productFocused__main__descriptionAndReviews__titleBar {
-        background: #F2F7F8;
+        background: #f2f7f8;
       }
 
-      .Mui-selected{
+      .Mui-selected {
         color: #000;
         font-weight: 500;
       }
 
-      .MuiTabs-indicator{
-        background-color: #2ECC71;
+      .MuiTabs-indicator {
+        background-color: #2ecc71;
       }
 
-      .MuiTypography-root{
+      .MuiTypography-root {
         font-size: 14px;
       }
 
-      .productFocused__main__descriptionAndReviews__content__rating__detail{
+      .productFocused__main__descriptionAndReviews__content__rating__detail {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         text-align: center;
+        align-items: center;
+        line-height: 1.6;
+
+        .productFocused__main__descriptionAndReviews__content__rating__detail__average__rating {
+          align-self: center;
+          h1 {
+            font-size: 3rem;
+          }
+
+          .MuiRating-root {
+            font-size: 1.8rem;
+          }
+
+          .productFocused__main__descriptionAndReviews__content__rating__detail__total__reviews {
+            color: #7a7a7a;
+          }
+        }
+
+        .productFocused__main__descriptionAndReviews__content__rating__detail__star__rating{
+          .productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__five__star,
+          .productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__four__star,
+          .productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__three__star,
+          .productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__two__star,
+          .productFocused__main__descriptionAndReviews__content__rating__detail__star__rating__one__star{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 15px;
+
+            .MuiLinearProgress-root{
+              flex: 1;
+              min-width: 150px;
+              background-color: #E4E8EB;
+              border-radius: 10px;
+              margin: 0 10px;
+            }
+
+            .MuiLinearProgress-bar{
+              background-color: #00AB54;
+            }
+
+            .title{
+              font-weight: 500;
+              color: #000;
+            }
+
+            div{
+              color: #7a7a7a;
+            }
+          }
+        }
+
+        .productFocused__main__descriptionAndReviews__content__rating__detail__write__review{
+          .MuiButton-root{
+            border: 0.5px solid #00aa55;
+            color: #00aa55;
+
+            &:hover{
+              background-color: rgb(245, 245, 245);
+            }
+          }
+        }
+      }
+
+      .productFocused__main__descriptionAndReviews__content__collapsed__form{
+        border-top: 0.5px solid #aaa;
+        margin-top: 20px;
+        padding-top: 20px;
+
+        .productFocused__main__descriptionAndReviews__content__collapsed__form__content{
+          background: #F3F6F8;
+          padding: 15px 20px;
+          border-radius: 15px;
+        }
       }
     }
   }
