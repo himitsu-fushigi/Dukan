@@ -217,8 +217,49 @@
 
         .productFocused__main__descriptionAndReviews__content__collapsed__form__content{
           background: #F3F6F8;
-          padding: 15px 20px;
+          padding: 25px 30px;
           border-radius: 15px;
+
+          .productFocused__main__descriptionAndReviews__content__collapsed__form__rating{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            p{
+              margin-right: 10px;
+            }
+          }
+          textarea, input{
+            width: 100%;
+            border: 0.5px solid #aaa;
+            font-size: 14px;
+            padding: 15px 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+
+            &:focus{
+              outline: none;
+            }
+            background: transparent;
+          }
+
+          textarea{
+            margin-top: 15px;
+          }
+
+          .productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons{
+            .productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__cancelButton{
+              border: 0.5px solid #aaa;
+              padding: 8px 20px 5 20px;
+              margin-right: 15px;
+            }
+
+            .productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__postButton{
+              background: #00AA55;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
         }
       }
     }

@@ -257,21 +257,15 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
                         setValue(newValue);
                       }}
                     />
-                    <form action="">
-                      <textarea
-                        name=""
-                        placeholder="Your Review*"
-                        id=""
-                        cols="30"
-                        rows="10"
-                      ></textarea>
-                      <input type="text" placeholder="Your Name*" />
-                      <input type="email" placeholder="Your Email*" />
-                    </form>
                   </div>
+                  <form action="">
+                    <textarea placeholder="Your Review*" rows="5"></textarea>
+                    <input type="text" placeholder="Your Name*" />
+                    <input type="email" placeholder="Your Email*" />
+                  </form>
                   <div className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons">
-                    <Button>Cancel</Button>
-                    <Button>Post Review</Button>
+                    <Button className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__cancelButton">Cancel</Button>
+                    <Button className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__postButton">Post Review</Button>
                   </div>
                 </div>
               </Collapse>
