@@ -96,7 +96,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
             <Link
               underline="hover"
               color="inherit"
-              href="/getting-started/installation/"
+              to="/getting-started/installation/"
             >
               Ecommerce
             </Link>
@@ -242,6 +242,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
                   </Button>
                 </div>
               </div>
+
               <Collapse
                 className="productFocused__main__descriptionAndReviews__content__collapsed__form"
                 in={checked}
@@ -258,17 +259,36 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
                       }}
                     />
                   </div>
-                  <form action="">
+                  <div>
                     <textarea placeholder="Your Review*" rows="5"></textarea>
                     <input type="text" placeholder="Your Name*" />
                     <input type="email" placeholder="Your Email*" />
-                  </form>
+                  </div>
                   <div className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons">
-                    <Button className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__cancelButton">Cancel</Button>
-                    <Button className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__postButton">Post Review</Button>
+                    <Button className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__cancelButton">
+                      Cancel
+                    </Button>
+                    <Button className="productFocused__main__descriptionAndReviews__content__collapsed__form__rateButtons__postButton">
+                      Post Review
+                    </Button>
                   </div>
                 </div>
               </Collapse>
+
+              {/* reviews */}
+              <div className="productFocused__main__descriptionAndReviews__content__reviews">
+                <div className="productFocused__main__descriptionAndReviews__content__reviews__user">
+                  <img src="https://images.unsplash.com/photo-1553976468-dcd9082bcd28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=930&q=80" alt="user image" />
+                  <div className="userFullName">Sangya Sherpa</div>
+                  <div>21st Oct, 2021</div>
+                </div>
+
+                <div className="productFocused__main__descriptionAndReviews__content__reviews__content">
+                  <Rating value={2}/>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni est dignissimos blanditiis omnis inventore assumenda culpa non quibusdam dolores optio, voluptatibus velit nam dicta! Neque, debitis esse. Provident, repudiandae qui!</div>
+                  <Button><i className="ri-thumb-up-line"></i> <span>Thanks (7.69k)</span></Button>
+                </div>
+              </div>
             </TabPanel>
           </Box>
         </div>
