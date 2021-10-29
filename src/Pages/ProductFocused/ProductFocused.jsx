@@ -108,11 +108,47 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
 
         {/* @section product display */}
         <div className="productFocused__main__productDisplay">
-          <img
-            src="https://minimals.cc/static/mock-images/products/product_1.jpg"
-            alt=""
-          />
-          <div className="productFocused__main__productDetails__content"></div>
+          <div className="productFocused__main__productDisplay__imageContent">
+            <img
+              src="https://minimals.cc/static/mock-images/products/product_1.jpg"
+              alt=""
+            />
+            {/* <div className="productFocused__main__productDisplay__showImages">
+              <Button>
+                <img
+                  src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80"
+                  alt=""
+                />
+              </Button>
+              <Button>
+                <img
+                  src="https://images.unsplash.com/photo-1584735175315-9d5df23860e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  alt=""
+                />
+              </Button>
+              <Button>
+                <img
+                  src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  alt=""
+                />
+              </Button>
+            </div> */}
+          </div>
+
+          <div className="productFocused__main__productDetails__content">
+            <div className="tag stock">In Stock</div>
+            <h2>Nike air force 1 ndestrukt</h2>
+
+            <div className="rating">
+              <Rating />
+              <div>(16.5k reviews)</div>
+            </div>
+            
+            <div className="price">
+              <div className="discounted">$15.43</div>
+              <div>$13.23</div>
+            </div>
+          </div>
         </div>
 
         {/* @section banner */}
@@ -278,15 +314,26 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
               {/* reviews */}
               <div className="productFocused__main__descriptionAndReviews__content__reviews">
                 <div className="productFocused__main__descriptionAndReviews__content__reviews__user">
-                  <img src="https://images.unsplash.com/photo-1553976468-dcd9082bcd28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=930&q=80" alt="user image" />
+                  <img
+                    src="https://images.unsplash.com/photo-1553976468-dcd9082bcd28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=930&q=80"
+                    alt="user image"
+                  />
                   <div className="userFullName">Sangya Sherpa</div>
                   <div>21st Oct, 2021</div>
                 </div>
 
                 <div className="productFocused__main__descriptionAndReviews__content__reviews__content">
-                  <Rating value={2}/>
-                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni est dignissimos blanditiis omnis inventore assumenda culpa non quibusdam dolores optio, voluptatibus velit nam dicta! Neque, debitis esse. Provident, repudiandae qui!</div>
-                  <Button><i className="ri-thumb-up-line"></i> <span>Thanks (7.69k)</span></Button>
+                  <Rating value={2} />
+                  <div>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Magni est dignissimos blanditiis omnis inventore assumenda
+                    culpa non quibusdam dolores optio, voluptatibus velit nam
+                    dicta! Neque, debitis esse. Provident, repudiandae qui!
+                  </div>
+                  <Button>
+                    <i className="ri-thumb-up-line"></i>{" "}
+                    <span>Thanks (7.69k)</span>
+                  </Button>
                 </div>
               </div>
             </TabPanel>
