@@ -148,6 +148,34 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
               <div className="discounted">$15.43</div>
               <div>$13.23</div>
             </div>
+
+            <div className="size">
+              <div>Size</div>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+
+            <div className="quantity">
+              <div>Quantity</div>
+              <div className="controller">
+                <Button>-</Button>
+                <div>1</div>
+                <Button>+</Button>
+              </div>
+            </div>
+
+            <div className="checkout">
+            <Button className="cart"><i className="ri-shopping-cart-line"></i> <div>Add to Cart</div>
+            </Button>
+            <Button className="checkoutBtn"><i className="ri-bill-line"></i><div>Checkout</div></Button>
+            </div>
           </div>
         </div>
 
@@ -316,7 +344,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, perspiciatis ius
                 <div className="productFocused__main__descriptionAndReviews__content__reviews__user">
                   <img
                     src="https://images.unsplash.com/photo-1553976468-dcd9082bcd28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=930&q=80"
-                    alt="user image"
+                    alt="user"
                   />
                   <div className="userFullName">Sangya Sherpa</div>
                   <div>21st Oct, 2021</div>

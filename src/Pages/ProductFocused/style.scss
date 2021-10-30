@@ -86,10 +86,10 @@
         .productFocused__main__productDisplay__showImages {
           margin-top: 15px;
 
-          .MuiButton-root{
+          .MuiButton-root {
             padding: 0;
             margin-right: 15px;
-            
+
             img {
               width: 100px;
               height: 50px;
@@ -98,11 +98,13 @@
         }
       }
 
-      .productFocused__main__productDetails__content{
+      .productFocused__main__productDetails__content {
         margin-left: 25px;
+        width: 33vw;
+        padding: 20px;
 
-        .tag{
-          margin-bottom: 5px;
+        .tag {
+          margin-bottom: 15px;
           text-transform: uppercase;
           font-size: 13px;
           padding: 5px 10px;
@@ -112,27 +114,89 @@
           border-radius: 15px;
           color: #fff;
 
-          &.stock{
+          &.stock {
             background: rgb(255, 122, 122);
           }
         }
 
-        .rating{
+        .rating {
           display: flex;
           align-items: center;
           margin: 10px 0;
         }
 
-        .price{
+        .price {
           font-size: 25px;
           font-weight: 600;
           display: flex;
           align-items: center;
 
-          .discounted{
+          .discounted {
             color: #aaa;
             margin-right: 10px;
             text-decoration: line-through;
+          }
+        }
+
+        .size {
+          margin-top: 15px;
+          display: flex;
+          justify-content: space-between;
+          font-size: 18px;
+          align-items: center;
+          border-top: 0.5px dotted #aaa;
+          padding-top: 15px;
+
+          select {
+            outline: none;
+            font-size: 16px;
+            border: 0.5px solid #aaa;
+            padding: 3px 15px;
+            border-radius: 5px;
+          }
+        }
+
+        .quantity {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-items: center;
+          margin-top: 15px;
+          border-bottom: 0.5px dotted #aaa;
+          padding-bottom: 15px;
+
+          .controller {
+            border: 0.5px solid #aaa;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+
+            .MuiButton-root {
+              min-width: auto;
+              width: 50px;
+            }
+          }
+        }
+
+        .checkout {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+          align-items: center;
+
+          .MuiButton-root{
+            padding: 8px 25px;
+          }
+
+          .cart {
+            background: #2ecc71;
+            color: #fff;
+            margin-right: 20px;
+          }
+
+          .checkoutBtn {
+            background: #ffc106;
+            color: #fff;
           }
         }
       }
