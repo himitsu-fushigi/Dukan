@@ -18,6 +18,7 @@ import BeautyAndHealth from "../BeautyAndHealth/BeautyAndHealth";
 import ComputerAndPeripherals from "../ComputerAndPeripherals/ComputerAndPeripherals";
 import Family from "../Family/Family";
 import ToysAndGames from "../ToysAndGames/ToysAndGames";
+import Inbox from "../Inbox/Inbox";
 
 /**
  * @cont3xt api global state manager
@@ -35,7 +36,11 @@ export default function Home() {
       <div className="home__main">
         {/* section => home__browseall */}
         {active === "browse-all" && <BrowseAll />}
+        
+        {/* section => inbox */}
+        {active === "inbox" && <Inbox />}
 
+        {/* @categories */}
         {/* section => vehicles */}
         {active === "vehicles" && <Vehicles />}
 
@@ -53,7 +58,7 @@ export default function Home() {
 
         {/* section => family */}
         {active === "family" && <Family />}
-        
+
         {/* section => toys and games */}
         {active === "toys-games" && <ToysAndGames />}
       </div>
