@@ -1,0 +1,48 @@
+.vehicles__container {
+  hr {
+    border: none;
+    border-top: 1px solid grey;
+    margin: 20px 0 30px 0;
+  }
+
+  .vehicles__topPicks {
+    .vehicles__topPicks__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .vehicles__topPicks__title__filters {
+      display: flex;
+
+      .MuiButton-root {
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-left: 8px;
+        }
+
+        select {
+          border: none;
+          background: transparent;
+          margin-left: 6px;
+          font-size: 15px;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .vehicles__topPicks__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}

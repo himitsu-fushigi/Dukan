@@ -14,9 +14,13 @@ import { useActiveSidebarDataLayerValue } from "../../Context/Sidebar/ActiveSide
 export default function Sidebar() {
   const [{ active }, dispatch] = useActiveSidebarDataLayerValue();
 
-  // @dev function to dispatch active tabs
-  // @param active bar name
+  /**
+   * @dev function to dispatch active tabs
+   * @param active bar name
+   */
+   
   const handleSidebarActiveDispatch = (payload) => {
+    console.log(payload)
     dispatch({
       type: "SET_ACTIVE_BAR",
       activeBar: payload,
